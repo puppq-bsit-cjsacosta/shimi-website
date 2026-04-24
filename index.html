@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/jpg/png" href="images/web-icon.png">
+    <title>shimi's desktop</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Google Font for title of boxes-->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Icons (FIXED) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+
+<div class="mobile-notice">
+    <p>please view on a desktop for the full experience! 🫧</p>
+</div>
+
+<!-- STARS -->
+<div class="star-container">
+    <span class="star" style="top:8%; left:12%; animation-delay: 0.1s;">⭐</span>
+    <span class="star" style="top:22%; left:85%; animation-delay: 1.4s;">⭐</span>
+    <span class="star" style="top:42%; left:28%; animation-delay: 0.8s;">⭐</span>
+    <span class="star" style="top:18%; left:62%; animation-delay: 2.2s;">⭐</span>
+    <span class="star" style="top:33%; left:75%; animation-delay: 0.5s;">⭐</span>
+    <span class="star" style="top:5%; left:48%; animation-delay: 1.1s;">⭐</span>
+    <span class="star" style="top:47%; left:12%; animation-delay: 2.9s;">⭐</span>
+    <span class="star" style="top:25%; left:35%; animation-delay: 0.3s;">⭐</span>
+    <span class="star" style="top:38%; left:68%; animation-delay: 1.6s;">⭐</span>
+    <span class="star" style="top:52%; left:55%; animation-delay: 0.2s;">⭐</span>
+    <span class="star" style="top:15%; left:92%; animation-delay: 2.5s;">⭐</span>
+    <span class="star" style="top:30%; left:5%; animation-delay: 0.7s;">⭐</span>
+    <span class="star" style="top:12%; left:38%; animation-delay: 1.8s;">⭐</span>
+    <span class="star" style="top:20%; left:72%; animation-delay: 1.3s;">⭐</span>
+    <span class="star" style="top:45%; left:88%; animation-delay: 0.4s;">⭐</span>
+    
+    <span class="star" style="top:48%; left:35%; animation-delay: 0.7s;">⭐</span>
+    <span class="star" style="top:52%; left:75%; animation-delay: 1.8s;">⭐</span>
+    <span class="star" style="top:55%; left:20%; animation-delay: 1.3s;">⭐</span>
+    <span class="star" style="top:58%; left:55%; animation-delay: 0.4s;">⭐</span>
+
+    <span class="star" style="top:15%; left:5%; animation-delay: 0.5s;">⭐</span>
+    <span class="star" style="top:35%; left:2%; animation-delay: 1.2s;">⭐</span>
+    <span class="star" style="top:10%; left:25%; animation-delay: 2.1s;">⭐</span>
+    <span class="star" style="top:5%; left:65%; animation-delay: 1.7s;">⭐</span>
+    
+    <span class="star" style="top:12%; left:80%; animation-delay: 1.9s;">⭐</span>
+    <span class="star" style="top:30%; left:95%; animation-delay: 0.4s;">⭐</span>
+    <span class="star" style="top:5%; left:35%; animation-delay: 0.8s;">⭐</span>
+    <span class="star" style="top:62%; left:70%; animation-delay: 0.2s;">⭐</span>
+    <span class="star" style="top:28%; left:15%; animation-delay: 1.1s;">⭐</span>
+</div>
+
+<div class="wave"></div>
+
+
+<!-- BUTTON SCROLL TO TOP -->
+<button onclick="playClickSound(); scrollToTop()" id="backToTop" title="Return to Desktop">
+    <i class="fa-solid fa-arrow-up"></i> 
+</button>   
+
+<!-- BUTTON SOUND -->
+<button onclick="toggleMusic()" id="music-btn" onclick="playClickSound()">
+    <img src="images/on-sound.png" id="music-icon-img" alt="Music Toggle">
+</button>
+
+<!-- BUTTON CLICK SOUND -->
+<audio id="click-sound" preload="auto">
+    <source src="audio/click-sound.wav" type="audio/mpeg">
+</audio>
+
+<!-- BG MUSIC -->
+<audio id="bg-music" loop>
+    <source src="audio/bg-music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- HOVER SOUND -->
+<audio id="hover-sound" src="audio/bubble-hover.mp3" preload="auto"></audio>
+
+<!-- WAVE -->
+<div class="waves">
+
+    <!-- BACK WAVE (darker) -->
+    <div class="wave wave-back">
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path fill="#255b87" d="M0,160 C260,100 480,240 720,160 C960,80 1200,240 1440,160 L1440,320 L0,320 Z"></path>
+        </svg>
+    </div>
+
+    <!-- FRONT WAVE (lighter) -->
+    <div class="wave wave-front">
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path fill="#2d6fa3" d="M0,160 C300,300 1100,100 1440,200 L1440,320 L0,320 Z"></path>
+        </svg>
+    </div>
+
+    <!-- FILL (this replaces your 5000px wave) -->
+    <div class="wave-fill"></div>
+
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="card">
+        <div class="top-bar">home</div>
+
+        <div class="content">
+            <h1><span class="highlight1">hi!</span> i'm shimi</h1>
+            <p>iskolar, designer and a virgo</p>
+
+            <div class="icons">
+                
+                <div class="icon" onclick="playClickSound(); scrollToSection('about')">
+                    <img src="images/icon-about.png" class="icon-img" alt="about">
+                    <span>about</span>
+                </div>
+                <div class="icon" onclick="playClickSound(); scrollToSection('links')">
+                    <img src="images/icon_link.png" class="icon-img" alt="links">
+                    <span>links</span>
+                </div>
+                <div class="icon" onclick="playClickSound(); scrollToSection('project')">
+                    <img src="images/icon-work.png" class="icon-img" alt="project">
+                    <span>project</span>
+                </div>
+                <div class="icon" onclick="playClickSound(); scrollToSection('faq')">
+                    <img src="images/icon_faq.webp" class="icon-img" alt="faq">
+                    <span>faq</span>
+                </div>
+                <div class="icon" onclick="playClickSound(); scrollToSection('contact')">
+                    <img src="images/icon_contact.png" class="icon-img" alt="contact">
+                    <span>contact</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section-card">
+    <div class="top-bar">about</div>
+    <div class="content editable">
+        <img src="images/about-cj.png" class="about-profile-pix" alt="shimi">
+        <!-- ✏️ EDIT THIS -->
+        <h2>who's shimi?</h2>
+        <p>known as <span class="highlight3"><i>"cj s. acosta"</i></span>, 
+            <u>everyone call him by his first name.</u> having a 
+            two letter name made it a great way to start a conversation after meeting him 
+            <span class="highlight2">(and he hates it)</span>. but that did not make him a "people" person.</p> 
+            
+        <p>he's <i>22 years old</i>, single, caring, di nagseselos, clingy, 
+            loyal and <span class="highlight2"><u>always make sure to present himself "the best" 
+            every time</u></span> (esp in fashion). started his college journey 
+            last 2024 as <span class="highlight3">an isko at pup-pq, and currently taking bsit</span></p>
+
+        <p><span class="highlight3"><i>a perfectionist</i></span>. <i>he hates it if something did not go according 
+            to his plans</i>, which make him appear and sound rude or mainitin 
+            ang ulo--if you don't know him personally <span class="highlight2">(pero baby sha swear 
+            (to selected persons only)).</span> </p>
+
+        <img src="images/cj-id.png" class="about-bottom-pix" alt="extra photo">
+
+    </div>
+</section>
+
+<!-- LINKS -->
+<section id="links" class="section-card">
+    <div class="top-bar">links</div>
+    <div class="content editable">
+        <h2>you can find me thru. . .</h2>
+        
+        <div class="link-icons" onclick="playClickSound()">
+            <div class="link-item">
+                <a href="https://www.instagram.com/sihedyi/" target="_blank">
+                    <img src="images/ig-icon.png" class="large-link-icon">
+                    <span>instagram</span>
+                </a>
+            </div>
+            <div class="link-item" onclick="playClickSound()">
+                <a href="https://github.com/puppq-bsit-cjsacosta" target="_blank">
+                    <img src="images/git-icon.png" class="large-link-icon">
+                    <span>github</span>
+                </a>
+            </div>
+            <div class="link-item" onclick="playClickSound()">
+                <a href="https://discord.gg/xfkvrNrz" target="_blank">
+                    <img src="images/discord-icon.png" class="large-link-icon">
+                    <span>discord</span>
+                </a>
+
+            </div>
+            <div class="link-item" onclick="playClickSound()">
+                <a href="https://www.facebook.com/sihedyi" target="_blank">
+                    <img src="images/fb-icon.png" class="large-link-icon">
+                    <span>facebook</span>
+                </a>
+            
+            </div>
+            <div class="link-item" onclick="playClickSound()">
+                <a href="https://www.x.com/patianod" target="_blank">
+                    <img src="images/twt-icon.png" class="large-link-icon">
+                    <span>twitter</span>
+                </a>
+
+            </div>
+            <div class="link-item" onclick="playClickSound()">
+                <a href="https://www.youtube.com/" target="_blank">
+                    <img src="images/yt-icon.webp" class="large-link-icon">
+                    <span>youtube</span>
+                </a>
+            </div>  
+            
+            <div class="link-item" onclick="playClickSound()">
+                <a href="https://www.linkedin.com/cjsacosta" target="_blank">
+                    <img src="images/linkedid-icon.png" class="large-link-icon">
+                    <span>linkedin</span>
+                </a>
+            </div>  
+
+            <div class="link-item" onclick="playClickSound()">
+                <a href="https://www.spotify.com/sihedyi" target="_blank">
+                    <img src="images/spotify-icon.png" class="large-link-icon">
+                    <span>spotify</span>
+                </a>
+            </div>  
+
+
+            <div class="link-disclaimer">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>Note: Clicking these links will open a new browser tab.</span>
+        </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECT -->
+<section id="project" class="section-card">
+    <div class="top-bar">project</div>
+    <div class="content editable">
+        
+
+        <h2>tools</h2>
+        <div class="tool-container">
+            <span class="tool-btn" onmouseover="playHoverSound()">VS Code</span>
+            <span class="tool-btn" onmouseover="playHoverSound()">Canva</span>
+            <span class="tool-btn" onmouseover="playHoverSound()">Figma</span>
+            <span class="tool-btn" onmouseover="playHoverSound()">GitHub Desktop</span>
+            <span class="tool-btn" onmouseover="playHoverSound()">Eclipse</span>
+            <span class="tool-btn" onmouseover="playHoverSound()">Cisco Packet Tracer</span>
+        </div>
+
+        <h2>development</h2>
+        <div class="tool-container">
+            <span class="tool-btn" onmouseover="playHoverSound()">HTML/CSS</span>
+            <span class="tool-btn" onmouseover="playHoverSound()">JavaScript</span>
+            <span class="tool-btn" onmouseover="playHoverSound()">Java</span>
+            <span class="tool-btn" onmouseover="playHoverSound()">C++</span>
+            <span class="tool-btn" onmouseover="playHoverSound()">Python</span>
+        </div>
+        
+        <div class="project-item">
+            <div class="project-info">
+                <h3>PolyCal</h3>
+                <p> <span class="highlight2">one of my first project in programming!</span> we were tasked 
+                    to create an application where we can <span class="highlight3">help students/staffs of 
+                    pup-pq.</span></p>
+
+                <p><i>this was fun to work on! i was the qa tester.</i></p>
+            </div>
+            <img src="images/polycal.png" class="project-image" alt="PolyCal Preview">
+        </div>
+
+        <div class="project-item">
+            <div class="project-info">
+                <h3>2048</h3>
+                <p><span class="highlight2">our second project in programming!</span> this time we're tasked to 
+                    improved an application. <span class="highlight3">we decided to transfrom the classic game 2048 
+                    into a desktop application!</span></p>
+
+                <p>we decided to <u>change its UI, and make the tiles 3x3</u> instead of the classic 4x4.</p>
+            </div>
+            <img src="images/2048.png" class="project-image" alt="2048 Preview">
+        </div>
+
+        <h2>other projects</h2>
+        <ul>
+            <li><span class="highlight2">a personal website (this one!)</span> where i can share about myself and my projects.</li>
+            <li><span class="highlight3">a book inventory</span> where we created for our finals.</li>
+
+    </div>
+</section>
+
+
+<!-- FAQ -->
+<section id="faq" class="section-card">
+    <div class="top-bar">faq</div>
+    <div class="content editable">
+        
+        <details class="faq-item">
+            <summary onclick="playClickSound()">who's shimi?</summary>
+            <div class="faq-answer">
+                <p> <span class="highlight2">it's my "in-game" name LOL</span> 
+                    <strong>(shimishimiya)</strong>. it's actually a song!
+                    <span class="highlight3">if you know the song, you'll understand!</span></p>
+
+                <p><i>hint: it's a song by jason derulo! XD</i></p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary onclick="playClickSound()">what's your work?</summary>
+            <div class="faq-answer">
+                <p><u>i'm onli a student from PUP-PQ.</u><span class="highlight3">no to work muna po </span></p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary onclick="playClickSound()">bat po ang sarap niyo po?</summary>
+            <div class="faq-answer">
+                <p>maliit na bagay! <span class="highlight2">(and maybe the fashion sense too).</span> 😉</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary onclick="playClickSound()">fav taylor swift song</summary>
+            <div class="faq-answer">
+                <p>atm, it's <span class="highlight3">"Guilty As Sin"</span> ni inang. <i>IYKYK</i></p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary onclick="playClickSound()">are you open for comissions?</summary>
+            <div class="faq-answer">
+                <p>not really. :p thank you for considering tho! </p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary onclick="playClickSound()">curry ramen</summary>
+            <div class="faq-answer">
+                <p><span class="highlight2">gets na gets!!!</span> tapos large? <i>TAMA</i></p>
+            </div>
+        </details>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section-card">
+    <div class="top-bar">contact</div>
+    <div class="content-center editable">
+        <h2>how to reach me?</h2>
+        
+        <div class="contact-layout">
+            <p><span class="highlight2">the easiest way to reach me is via email! </span>
+                i don't check my social media often, <span class="highlight3">so please
+                direct your questions to my email instead.</span></p>
+            
+            <img src="images/cat-mails.png" class="contact-illustration" alt="contact icon" onmouseenter="playMeow()" onmouseleave="stopMeow()">
+        </div>
+
+        <p><u>email me at: <strong>sihedyi@gmail.com</u></strong>
+        <br>or press the button below to open your mail app</p> 
+        
+        <a href="mailto:sihedyi@gmail.com" class="email-btn" onclick="playClickSound()">
+            <i class="fa-solid fa-envelope"></i> send an email
+        </a>
+    </div>
+</section>
+
+<audio id="meowSound" src="audio/cat-talking.mp3"></audio>
+
+<script src="script.js"></script>
+
+<footer class="footer">
+    <p>© 2026 cj s acosta</p>
+</footer>
+
+</body>
+</html>
